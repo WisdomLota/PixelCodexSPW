@@ -3,9 +3,9 @@ import GlowEffect from './GlowEffect';
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-screen flex flex-col lg:flex-row items-center justify-between xl:px-32 md:px-16 px-4 overflow-x-hidden">
+    <div className="relative min-h-screen flex flex-col lg:flex-row items-center justify-between xl:px-32 md:px-16 px-8 overflow-x-hidden">
       {/* Left Side (Text Content) */}
-      <div className="w-full lg:w-1/2 z-10">
+      <div className="w-full lg:w-1/2 z-10 md:pt-0 pt-16">
         <h1 className="text-4xl lg:text-5xl font-bold mb-4 karma-regular leading-12 md:leading-16">
           Is your child or sibling interested in tech or coding?
         </h1>
@@ -16,7 +16,7 @@ const HeroSection = () => {
           No problem! Book a free consultation session today and by the end of it
           we'll have a well structured roadmap for them to follow
         </p>
-        <button className="bg-[#ffcc00] float-end hover:bg-yellow-500 text-[#1e1e1e] font-bold py-3 px-8 rounded-md transition-colors cursor-pointer">
+        <button className="bg-[#ffcc00] float-end hover:bg-yellow-500 text-[#1e1e1e] font-noraml text-xl py-3 px-8 rounded-md transition-colors cursor-pointer">
           Book Consultation
         </button>
       </div>

@@ -2,35 +2,8 @@ import React, { useState } from 'react';
 import pixelX from "../assets/pixelX.svg";
 import pixelPlus from "../assets/pixelPlus.svg";
 
-const AccordionItem = ({ title, content, isOpen, toggleAccordion }) => {
-  return (
-    <div className="border-b border-[#fbfbfb]">
-      <button
-        className="w-full py-4 md:py-8 px-0 flex justify-between items-center text-left text-white focus:outline-none"
-      >
-        <h3 className={`text-2xl font-semibold karma-regular ${isOpen ? 'text-[#66ffff]' : 'text-[#fbfbfb]'}` }>{title}</h3>
-        <img onClick={toggleAccordion} src={isOpen ? pixelX : pixelPlus} alt="toggler" />
-      </button>
-      
-      <div 
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100 mb-4' : ' max-h-0 opacity-0'
-        }`}
-      >
-        <div className="text-[#fbfbfb] pb-4 poppins-regular">
-          {content}
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const PixelCodexAccordion = () => {
   const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   const accordionData = [
     {
@@ -67,19 +40,50 @@ const PixelCodexAccordion = () => {
     }
   ];
 
+  // Improved toggle function
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <div className="mx-auto text-[#fbfbfb] xl:px-32 md:px-16 px-4 xl:mt-20 md:mt-12 -mt-20">
+    <div className="mx-auto text-[#fbfbfb] xl:px-32 md:px-16 px-8 xl:mt-20 md:mt-12 -mt-16">
       <h1 className="text-4xl lg:text-5xl font-bold mb-6 karma-regular border-b border-[#fbfbfb] pb-1">What is Pixel Codex and What can they do for me?</h1>
       
-      <div>
+      <div className="flex flex-col gap-2">
         {accordionData.map((item, index) => (
-          <AccordionItem
-            key={index}
-            title={item.title}
-            content={item.content}
-            isOpen={openIndex === index}
-            toggleAccordion={() => toggleAccordion(index)}
-          />
+          <div key={index} className="border-b border-[#fbfbfb] relative z-10">
+            <div 
+              className="w-full py-4 md:py-6 flex justify-between items-center text-left text-[#fbfbfb] cursor-pointer"
+              onClick={() => toggleAccordion(index)}
+            >
+              <h3 className={`text-2xl font-semibold karma-regular ${openIndex === index ? 'text-[#66ffff]' : 'text-[#fbfbfb]'}`}>
+                {item.title}
+              </h3>
+              <button 
+                type="button"
+                className="focus:outline-none p-2"
+                aria-expanded={openIndex === index}
+                aria-controls={`accordion-content-${index}`}
+              >
+                <img 
+                  src={openIndex === index ? pixelX : pixelPlus} 
+                  alt={openIndex === index ? "Close section" : "Open section"} 
+                  className="w-6 h-6"
+                />
+              </button>
+            </div>
+            
+            <div 
+              id={`accordion-content-${index}`}
+              className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                openIndex === index ? 'max-h-[500px] opacity-100 mb-4' : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="text-[#fbfbfb] pb-4 poppins-regular text-sm md:text-lg pr-4">
+                {item.content}
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     </div>
