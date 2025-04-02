@@ -1,94 +1,70 @@
 import React from 'react';
 import GlowEffect from './GlowEffect';
+import joinWhatsapp from '../assets/joinWhatsapp.png';
+import joinTelegram from '../assets/joinTelegram.png';
 
 const JoinCommunity = () => {
   return (
-    <div className="relative w-full bg-[#1e1e1e] text-white py-16 overflow-hidden">
-      <div className="container mx-auto px-4 relative z-10">
+    <div className="w-full bg-[#1e1e1e] text-[#fbfbfb] py-16 xl:px-32 md:px-16 px-8 overflow-x-hidden min-h-screen">
+
+      <div className="flex flex-col md:flex-row justify-between items-center relative mt-8 md:mt-28">
         {/* Header */}
-        <div className="text-center mb-12 relative">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Join the our Community !!!</h2>
-          <p className="text-xl max-w-3xl mx-auto">
+        <div className="mb-12 relative text-start">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 karma-regular">Join Our Community !!!</h2>
+          <p className="poppins-regular mb-8">
             Join the Pixel Codex Academy Incubator Community and take your programming journey to the next level!
           </p>
         </div>
-
-        {/* Community platforms */}
-        <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 mt-16">
-          {/* WhatsApp */}
-          <div className="relative bg-[#1c1c1c] rounded-xl p-8 border border-gray-800 flex-1 max-w-lg mx-auto">
-            <div className="flex flex-col h-full">
-              <h3 className="text-3xl font-bold mb-6">Whatsapp</h3>
-              
-              <div className="flex-grow my-8 flex justify-center">
-                <div className="relative h-64 w-48">
-                  {/* WhatsApp phone illustration */}
-                  <div className="absolute inset-0">
-                    {/* Simple phone outline and content would go here */}
-                  </div>
-                </div>
-              </div>
-              
-              <button className="mt-auto w-full py-3 px-6 bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black transition-colors duration-300 rounded-md font-bold">
-                Join Community
-              </button>
-            </div>
-            
-            {/* Small glow effect */}
-            {/* <div className="absolute inset-0 pointer-events-none">
-              <GlowEffect
-                width="100%"
-                height="100%"
-                intensity={0.1}
-                color="#66ffff"
-                position="top-right"
-                boxDensity={0.4}
-              />
-            </div> */}
-          </div>
-
-          {/* Telegram */}
-          <div className="relative bg-[#1c1c1c] rounded-xl p-8 border border-gray-800 flex-1 max-w-lg mx-auto">
-            <div className="flex flex-col h-full">
-              <h3 className="text-3xl font-bold mb-6">Telegram</h3>
-              
-              <div className="flex-grow my-8 flex justify-center">
-                <div className="relative h-64 w-48">
-                  {/* Telegram illustration would go here */}
-                </div>
-              </div>
-              
-              <button className="mt-auto w-full py-3 px-6 bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black transition-colors duration-300 rounded-md font-bold">
-                Join Community
-              </button>
-            </div>
-            
-            {/* Small glow effect */}
-            <div className="absolute inset-0 pointer-events-none">
-              <GlowEffect
-                width="50%"
-                height="50%"
-                intensity={0.08}
-                color="#66ffff"
-                position="top-right"
-                boxDensity={0.2}
-              />
-            </div>
-          </div>
+        {/* Small glow effect */}
+        <div className="md:flex hidden absolute right-0 top-0 pointer-events-none pt-12">
+          <GlowEffect
+            width="60%"
+            height="60%"
+            intensity={0.08}
+            color="#66ffff"
+            position="right" 
+            boxDensity={0.2}
+            className="lg:scale-60 pr-28 transform-gpu"
+          />
+        </div>  
+        <div className="absolute md:hidden flex right-0 top-0 pointer-events-none w-full h-full">
+          <GlowEffect
+            width="100%"
+            height="100%"
+            intensity={0.05}
+            color="#66ffff"
+            position="top-right" 
+            boxDensity={0.2}
+            className="transform-gpu"
+          />
         </div>
       </div>
+
+      <div className='mt-12 flex flex-col md:flex-row justify-between items-center gap-16 poppins-regular'>
+
+        <div className='flex border-t-2 border-l-2 border-b-2 rounded-tl-xl rounded-bl-xl p-4 justify-center items-center'>
+          <div className='space-y-8'>
+            <p className='text-2xl font-medium'>Whatsapp</p>
+            <button className='md:text-xl text-[#ffcc00] border rounded-md p-2 border-[#ffcc00] hover:text-[#ffff00] hover:border-[#ffff00] cursor-pointer w-40 md:w-fit'>Join Community</button>
+          </div>
+          <div className=''>
+            <img src={joinWhatsapp} alt="join-whatsapp" className='w-72 h-64'/>
+          </div>
+        </div>
+
+        <div className='flex border-t-2 border-l-2 border-b-2 rounded-tl-xl rounded-bl-xl p-4 justify-center items-center'>
+          <div className='space-y-8'>
+            <p className='text-2xl font-medium'>Telegram</p>
+            <button className='md:text-xl text-[#ffcc00] border rounded-md p-2 border-[#ffcc00] hover:text-[#ffff00] hover:border-[#ffff00] cursor-pointer w-40 md:w-fit'>Join Community</button>
+          </div>
+          <div>
+            <img src={joinTelegram} alt="join-telegram"className='w-72 h-64' />
+          </div>
+        </div>
+
+      </div>
       
-      {/* Background glow - larger and more subtle */}
-      {/* <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <GlowEffect
-          width="100%"
-          height="100%"
-          intensity={0.05}
-          color="#66ffff"
-          position="top-right"
-          boxDensity={0.2}
-        />
-      </div> */}
+      
     </div>
   );
 };
