@@ -15,7 +15,7 @@ const NavBar = () => {
       <div className="xl:px-32 md:px-16 px-8 flex justify-between space-x-4 items-center">
         {/* Logo */}
         <div className="flex items-center -ml-6">
-          <img src={PClogo} alt="PixelCodexLogo" />
+          <img src={PClogo} alt="PixelCodexLogo" className='w-16 h-16 md:w-28 md:h-28'/>
         </div>
 
         {/* Desktop Navigation */}
@@ -39,7 +39,7 @@ const NavBar = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <img onClick={toggleMenu} src={isMenuOpen ? pixelX : pixelMenu} alt="menu-bar" className='md:hidden p-2 cursor-pointer'/>
+          <img onClick={toggleMenu} src={isMenuOpen ? pixelX : pixelMenu} alt="menu-bar" className='md:hidden p-2 -mr-8 cursor-pointer w-16 h-16'/>
         </div>
       </div>
 

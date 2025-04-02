@@ -5,7 +5,7 @@ import joinTelegram from '../assets/joinTelegram.png';
 
 const JoinCommunity = () => {
   return (
-    <div className="w-full bg-[#1e1e1e] text-[#fbfbfb] py-16 xl:px-32 md:px-16 px-8 overflow-x-hidden min-h-screen">
+    <div className="w-full bg-[#1e1e1e] text-[#fbfbfb] py-16 xl:px-32 md:px-16 px-8 mt-20 overflow-x-hidden min-h-screen">
 
       <div className="flex flex-col md:flex-row justify-between items-center relative mt-8 md:mt-28">
         {/* Header */}
@@ -40,12 +40,12 @@ const JoinCommunity = () => {
         </div>
       </div>
 
-      <div className='mt-12 flex flex-col lg:flex-row justify-between items-center gap-16 poppins-regular'>
+      <div className='flex flex-col md:flex-row justify-between items-center gap-16 poppins-regular'>
  
          <div className='flex border-t-2 border-l-2 border-b-2 rounded-tl-xl rounded-bl-xl p-4 justify-center items-center'>
            <div className='space-y-8'>
              <p className='text-2xl font-medium'>Whatsapp</p>
-             <button className='md:text-xl text-[#ffcc00] border rounded-md p-2 border-[#ffcc00] hover:text-[#ffff00] hover:border-[#ffff00] cursor-pointer w-40 md:w-52'>Join Community</button>
+             <button className='md:text-xl text-[#ffcc00] border rounded-md p-2 border-[#ffcc00] hover:text-[#ffff00] hover:border-[#ffff00] cursor-pointer text-nowrap'>Join Community</button>
            </div>
            <div className=''>
              <img src={joinWhatsapp} alt="join-whatsapp" className='w-72 h-64'/>
@@ -54,7 +54,7 @@ const JoinCommunity = () => {
          <div className='flex border-t-2 border-l-2 border-b-2 rounded-tl-xl rounded-bl-xl p-4 justify-center items-center'>
            <div className='space-y-8'>
              <p className='text-2xl font-medium'>Telegram</p>
-             <button className='md:text-xl text-[#ffcc00] border rounded-md p-2 border-[#ffcc00] hover:text-[#ffff00] hover:border-[#ffff00] cursor-pointer w-40 md:w-52'>Join Community</button>
+             <button className='md:text-xl text-[#ffcc00] border rounded-md p-2 border-[#ffcc00] hover:text-[#ffff00] hover:border-[#ffff00] cursor-pointer text-nowrap'>Join Community</button>
            </div>
            <div>
              <img src={joinTelegram} alt="join-telegram"className='w-72 h-64' />

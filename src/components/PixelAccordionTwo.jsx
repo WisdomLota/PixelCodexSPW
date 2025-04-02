@@ -34,7 +34,7 @@ const PixelAccordionTwo = () => {
   };
 
   return (
-    <div className="mx-auto text-[#fbfbfb] xl:px-32 md:px-16 px-8 xl:mt-20 md:mt-20 -mt-16">
+    <div className="mx-auto text-[#fbfbfb] xl:px-32 md:px-16 px-8 xl:mt-20 md:mt-20 mt-4">
       <h1 className="text-4xl lg:text-5xl font-bold mb-6 karma-regular pt-20 ">What more is there to Pixel Codex?</h1>
       <p className='border-b border-[#fbfbfb] pb-3 poppins-regular'>Well, aside from our community, courses, mentorship program, hackathon and everything else we’ve already talked about, we also offer;</p>
       
@@ -65,7 +65,7 @@ const PixelAccordionTwo = () => {
             <div 
               id={`accordion-content-${index}`}
               className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                openIndex === index ? 'max-h-[500px] opacity-100 mb-4' : 'max-h-0 opacity-0'
+                openIndex === index ? 'max-h-fit opacity-100 mb-4' : 'max-h-0 opacity-0'
               }`}
             >
               <div className="text-[#fbfbfb] pb-4 poppins-regular pr-2">

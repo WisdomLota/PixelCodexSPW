@@ -46,7 +46,7 @@ const PixelCodexAccordion = () => {
   };
 
   return (
-    <div className="mx-auto text-[#fbfbfb] xl:px-32 md:px-16 px-8 xl:mt-20 md:mt-12 -mt-16">
+    <div className="mx-auto text-[#fbfbfb] xl:px-32 md:px-16 px-8 xl:mt-20 md:mt-12 -mt-20">
       <h1 className="text-4xl lg:text-5xl font-bold mb-6 karma-regular border-b border-[#fbfbfb] pb-1">What is Pixel Codex and What can they do for me?</h1>
       
       <div className="flex flex-col gap-2">
@@ -76,7 +76,7 @@ const PixelCodexAccordion = () => {
             <div 
               id={`accordion-content-${index}`}
               className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                openIndex === index ? 'max-h-[500px] opacity-100 mb-4' : 'max-h-0 opacity-0'
+                openIndex === index ? 'max-h-fit opacity-100 mb-4' : 'max-h-0 opacity-0'
               }`}
             >
               <div className="text-[#fbfbfb] pb-4 poppins-regular pr-2">

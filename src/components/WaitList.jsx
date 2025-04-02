@@ -50,7 +50,7 @@ const WaitList = () => {
       };
 
   return (
-    <div className="relative min-h-screen flex flex-col lg:flex-row items-center justify-between xl:px-32 md:px-16 px-8 overflow-x-hidden">
+    <div className="relative min-h-screen mt-20 flex flex-col lg:flex-row items-center justify-between xl:px-32 md:px-16 px-8 overflow-x-hidden">
       {/* Left Side (Text Content) */}
       <div className="w-full lg:w-1/2 z-10 md:pt-0 pt-32">
         <h1 className="text-5xl font-bold mb-4 karma-regular leading-12 md:leading-16">
