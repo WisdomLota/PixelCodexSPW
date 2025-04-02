@@ -13,6 +13,19 @@ const GlowEffect = ({
 }) => {
   const containerRef = useRef(null);
 
+  // Convert blur class to inline filter style
+  const getBlurFilter = (level) => {
+    const blurMap = {
+      'sm': '4px',
+      'md': '8px',
+      'lg': '16px',
+      'xl': '24px',
+      '2xl': '40px',
+      '3xl': '124px'
+    };
+    return blurMap[level] || '64px'; // Default to 3xl
+  };
+
   useEffect(() => {
     const createGlowingBoxes = () => {
       if (!containerRef.current) return;
@@ -45,7 +58,11 @@ const GlowEffect = ({
       
       // Create and position the main glow effect
       const mainGlow = document.createElement('div');
-      mainGlow.className = `absolute glow-effect rounded-full filter blur-${blurLevel} animate-pulse-scale`;
+      mainGlow.className = `absolute glow-effect rounded-full animate-pulse-scale`;
+      
+      // Apply blur as inline style instead of a class
+      mainGlow.style.filter = `blur(${getBlurFilter(blurLevel)})`;
+      
       mainGlow.style.backgroundColor = color;
       mainGlow.style.opacity = intensity.toString();
       
@@ -147,6 +164,37 @@ const GlowEffect = ({
       });
     };
     
+    // Add needed animations CSS
+    const addAnimationStyles = () => {
+      const styleId = 'glow-effect-animations';
+      if (!document.getElementById(styleId)) {
+        const styleTag = document.createElement('style');
+        styleTag.id = styleId;
+        styleTag.innerHTML = `
+          @keyframes pulse-scale {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+          }
+          
+          @keyframes float-grow {
+            0% { opacity: 0; transform: translateY(0px) scale(0.8); }
+            50% { opacity: 0.5; transform: translateY(-20px) scale(1.2); }
+            100% { opacity: 0; transform: translateY(-40px) scale(0.8); }
+          }
+          
+          .animate-pulse-scale {
+            animation: pulse-scale 5s ease-in-out infinite;
+          }
+          
+          .animate-float-grow {
+            animation: float-grow 10s ease-in-out infinite;
+          }
+        `;
+        document.head.appendChild(styleTag);
+      }
+    };
+    
+    addAnimationStyles();
     createGlowingBoxes();
     
     // Re-create animation on window resize

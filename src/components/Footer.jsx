@@ -17,7 +17,7 @@ const Footer = () => {
         <p className="text-md text-center text-[#fbfbfb] mb-6">Empowering the next generation of programmers</p>
         
         {/* Copyright with auto-updating year */}
-        <p className="flex text-[#66ffff]">P<span><p className='text-[#ffcc00]'>ixel C</p></span>odex © {currentYear}</p>
+        <p className="flex text-[#66ffff]">P<span className='text-[#ffcc00]'>ixel C</span>odex © {currentYear}</p>
       </div>
     </footer>
   );

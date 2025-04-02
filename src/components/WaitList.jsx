@@ -69,7 +69,7 @@ const WaitList = () => {
 
         <form onSubmit={handleSubmit}>
             <div className='mb-4 text-[#fbfbfb]'>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' 
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email' id='email' name='email'
                     className={`w-full px-6 rounded-md py-4 border-2 border-[#fbfbfb] focus:outline-none ${emailError ? 'border-red-500' : ''}`}/>
                 {emailError && <p className="mt-1 text-red-500 text-sm">{emailError}</p>}
             </div>
