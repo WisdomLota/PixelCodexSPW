@@ -3,7 +3,7 @@ import GlowEffect from './GlowEffect';
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-screen flex flex-col lg:flex-row items-center justify-between xl:px-16 md:px-12 px-4 overflow-x-hidden">
+    <div className="relative min-h-screen flex flex-col lg:flex-row items-center justify-between xl:px-32 md:px-16 px-4 overflow-x-hidden">
       {/* Left Side (Text Content) */}
       <div className="w-full lg:w-1/2 z-10">
         <h1 className="text-4xl lg:text-5xl font-bold mb-4 karma-regular leading-12 md:leading-16">
