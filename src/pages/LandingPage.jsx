@@ -3,6 +3,8 @@ import NavBar from '../components/NavBar'
 import HeroSection from '../components/HeroSection'
 import JoinCommunity from '../components/JoinCommunity'
 import PixelCodexAccordion from '../components/PixelCodexAccordion'
+import PixelAccordionTwo from '../components/PixelAccordionTwo'
+import WaitList from '../components/WaitList'
 
 const LandingPage = () => {
   return (
@@ -11,6 +13,8 @@ const LandingPage = () => {
         <HeroSection />
         <PixelCodexAccordion />
         <JoinCommunity />
+        <PixelAccordionTwo />
+        <WaitList />
     </div>
   )
 }
