@@ -34,7 +34,7 @@ const PixelAccordionTwo = () => {
   };
 
   return (
-    <div className="mx-auto text-[#fbfbfb] xl:px-32 md:px-16 px-8 xl:mt-20 md:mt-20 mt-4">
+    <div className="mx-auto text-[#fbfbfb] xl:px-32 md:px-16 px-8 mt-32">
       <h1 className="text-4xl lg:text-5xl font-bold mb-6 karma-regular pt-20 ">What more is there to Pixel Codex?</h1>
       <p className='border-b border-[#fbfbfb] pb-3 poppins-regular'>Well, aside from our community, courses, mentorship program, hackathon and everything else we’ve already talked about, we also offer;</p>
       

@@ -37,11 +37,11 @@ const HeroSection = () => {
         <GlowEffect
           width="100%"
           height="100%"
-          intensity={0.1}
+          intensity={0.05}
           color="#66ffff"
-          position="right" 
+          position="bottom-right" 
           boxDensity={0.2}
-          className="scale-60 transform-gpu"
+          className="scale-80 transform-gpu"
         />
       </div>
     </div>

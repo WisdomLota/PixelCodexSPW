@@ -40,13 +40,13 @@ const PixelCodexAccordion = () => {
     }
   ];
 
-  // Improved toggle function
+  //toggle function
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <div className="mx-auto text-[#fbfbfb] xl:px-32 md:px-16 px-8">
+    <div className="mx-auto text-[#fbfbfb] xl:px-32 md:px-16 px-8 mt-24 pb-12">
       <h1 className="text-4xl lg:text-5xl font-bold mb-6 karma-regular border-b border-[#fbfbfb] pb-1">What is Pixel Codex and What can they do for me?</h1>
       
       <div className="flex flex-col gap-2">

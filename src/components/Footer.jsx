@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full text-[#fbfbfb] pt-16 pb-8 poppins-regular">
+    <footer className="w-full text-[#fbfbfb] mt-32 pb-8 poppins-regular">
       <div className="container mx-auto flex flex-col items-center justify-center text-center">
         {/* Main title */}
         <h2 className="text-2xl md:text-3xl font-medium mb-8">Pixel Codex</h2>
