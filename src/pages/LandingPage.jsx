@@ -5,6 +5,7 @@ import JoinCommunity from '../components/JoinCommunity'
 import PixelCodexAccordion from '../components/PixelCodexAccordion'
 import PixelAccordionTwo from '../components/PixelAccordionTwo'
 import WaitList from '../components/WaitList'
+import Footer from '../components/Footer'
 
 const LandingPage = () => {
   return (
@@ -15,6 +16,7 @@ const LandingPage = () => {
         <JoinCommunity />
         <PixelAccordionTwo />
         <WaitList />
+        <Footer />
     </div>
   )
 }
