@@ -48,7 +48,7 @@ const JoinCommunity = () => {
              <button className='md:text-xl text-[#ffcc00] border rounded-md p-2 border-[#ffcc00] hover:text-[#ffff00] hover:border-[#ffff00] cursor-pointer text-nowrap'>Join Community</button>
            </div>
            <div className=''>
-             <img src={joinWhatsapp} alt="join-whatsapp" className='w-72 h-64'/>
+             <img src={joinWhatsapp} alt="join-whatsapp" className='max-w-72 max-h-64'/>
            </div>
          </div>
          <div className='flex border-t-2 border-l-2 border-b-2 rounded-tl-xl rounded-bl-xl p-4 justify-center items-center'>
@@ -57,7 +57,7 @@ const JoinCommunity = () => {
              <button className='md:text-xl text-[#ffcc00] border rounded-md p-2 border-[#ffcc00] hover:text-[#ffff00] hover:border-[#ffff00] cursor-pointer text-nowrap'>Join Community</button>
            </div>
            <div>
-             <img src={joinTelegram} alt="join-telegram"className='w-72 h-64' />
+             <img src={joinTelegram} alt="join-telegram"className='max-w-72 max-h-64' />
            </div>
          </div>
  
