@@ -57,7 +57,7 @@ const PixelAccordionTwo = () => {
                 <img 
                   src={openIndex === index ? pixelX : pixelPlus} 
                   alt={openIndex === index ? "Close section" : "Open section"} 
-                  className="w-6 h-6"
+                  className="min-w-6 min-h-6"
                 />
               </button>
             </div>

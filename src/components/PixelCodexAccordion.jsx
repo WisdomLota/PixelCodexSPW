@@ -51,7 +51,7 @@ const PixelCodexAccordion = () => {
       
       <div className="flex flex-col gap-2">
         {accordionData.map((item, index) => (
-          <div key={index} className="border-b border-[#fbfbfb] relative z-10">
+          <div key={index} className="border-b border-white relative z-10">
             <div 
               className="w-full py-4 md:py-6 flex justify-between items-center text-left text-[#fbfbfb] cursor-pointer"
               onClick={() => toggleAccordion(index)}
@@ -68,7 +68,7 @@ const PixelCodexAccordion = () => {
                 <img 
                   src={openIndex === index ? pixelX : pixelPlus} 
                   alt={openIndex === index ? "Close section" : "Open section"} 
-                  className="w-6 h-6"
+                  className="min-h-6 min-w-6"
                 />
               </button>
             </div>
