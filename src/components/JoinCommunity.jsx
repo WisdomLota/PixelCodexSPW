@@ -5,7 +5,7 @@ import joinTelegram from '../assets/joinTelegram.png';
 
 const JoinCommunity = () => {
   return (
-    <div className="w-full bg-[#1e1e1e] text-[#fbfbfb] py-16 xl:px-32 md:px-16 px-8 mt-32 overflow-x-hidden min-h-screen">
+    <div id='community' className="w-full bg-[#1e1e1e] text-[#fbfbfb] py-16 xl:px-32 md:px-16 px-8 mt-32 overflow-x-hidden min-h-screen">
 
       <div className="flex flex-col md:flex-row justify-between items-center relative mt-8 md:mt-28">
         {/* Header */}

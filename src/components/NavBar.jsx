@@ -20,19 +20,19 @@ const NavBar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 text-lg">
-          <a href="/consultation" className="hover:text-[#66ffff] transition-colors">
+          <a href="/#consultation" className="hover:text-[#66ffff] transition-colors">
             Consultation
           </a>
-          <a href="/about" className="hover:text-[#66ffff] transition-colors">
+          <a href="/#about" className="hover:text-[#66ffff] transition-colors">
             About
           </a>
-          <a href="/community" className="hover:text-[#66ffff] transition-colors">
+          <a href="/#community" className="hover:text-[#66ffff] transition-colors">
             Community
           </a>
-          <a href="/services" className="hover:text-[#66ffff] transition-colors">
+          <a href="/#services" className="hover:text-[#66ffff] transition-colors">
             Services
           </a>
-          <a href="/newsletter" className="hover:text-[#66ffff] transition-colors">
+          <a href="/#newsletter" className="hover:text-[#66ffff] transition-colors">
             Newsletter
           </a>
         </div>
@@ -48,35 +48,35 @@ const NavBar = () => {
         <div className="md:hidden bg-[#1c1c1c] max-w-96 absolute mt-2 py-4 right-4 top-20 px-12 rounded-xl shadow-lg z-50">
           <div className="flex flex-col text-lg space-y-4">
             <a 
-              href="/consultation" 
+              href="/#consultation" 
               className=" py-2 hover:text-[#66ffff] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Consultation
             </a>
             <a 
-              href="/about" 
+              href="/#about" 
               className="py-2 hover:text-[#66ffff] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </a>
             <a 
-              href="/community" 
+              href="/#community" 
               className="py-2 hover:text-[#66ffff] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Community
             </a>
             <a 
-              href="/services" 
+              href="/#services" 
               className="py-2 hover:text-[#66ffff] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </a>
             <a 
-              href="/newsletter" 
+              href="/#newsletter" 
               className="py-2 hover:text-[#66ffff] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
