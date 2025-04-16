@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GlowEffect from './GlowEffect';
+import BookingPopup from './BookingPopup';
 
 const HeroSection = () => {
+  const [isBookingPopupOpen, setIsBookingPopupOpen] = useState(false);
+
+  const openBookingPopup = () => {
+    setIsBookingPopupOpen(true);
+  };
+
+  const closeBookingPopup = () => {
+    setIsBookingPopupOpen(false);
+  };
+
   return (
     <div id='consultation' className="relative h-screen flex flex-col lg:flex-row items-center justify-between xl:px-32 md:px-16 px-8 -mt-8 overflow-hidden scroll-smooth">
       {/* Left Side (Text Content) */}
@@ -16,7 +27,10 @@ const HeroSection = () => {
           No problem! Book a free consultation session today and by the end of it
           we'll have a well structured roadmap for them to follow
         </p>
-        <button className="bg-[#ffcc00] float-end hover:bg-yellow-500 text-[#1e1e1e] font-noraml text-xl py-3 px-8 rounded-md transition-colors cursor-pointer">
+        <button 
+          className="bg-[#ffcc00] float-end hover:bg-yellow-500 text-[#1e1e1e] font-noraml text-xl py-3 px-8 rounded-md transition-colors cursor-pointer"
+          onClick={openBookingPopup}
+        >
           Book Consultation
         </button>
       </div>
@@ -44,6 +58,12 @@ const HeroSection = () => {
           className="scale-80 transform-gpu"
         />
       </div>
+
+      {/* Booking Popup */}
+      <BookingPopup 
+        isOpen={isBookingPopupOpen} 
+        onClose={closeBookingPopup} 
+      />
     </div>
   );
 };
