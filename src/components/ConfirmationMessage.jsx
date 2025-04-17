@@ -2,7 +2,7 @@ import React from 'react';
 
 const ConfirmationMessage = ({ onDone }) => {
   return (
-    <div className="text-center py-4">
+    <div className="text-center p-4 bg-[#1e1e1e] border-2 border-white rounded-md poppins-regular">
       <h2 className="text-2xl font-bold mb-4">Session Booked</h2>
       
       <p className="mb-8 text-center">
@@ -12,7 +12,7 @@ const ConfirmationMessage = ({ onDone }) => {
       
       <button
         onClick={onDone}
-        className="bg-[#ffcc00] hover:bg-yellow-500 text-[#1e1e1e] font-normal py-2 px-8 rounded-md transition-colors"
+        className="border-2 border-[#ffcc00] hover:border-yellow-500 hover:text-yellow-500 cursor-pointer text-[#ffcc00] font-normal py-2 px-8 rounded-md transition-colors"
       >
         Done
       </button>

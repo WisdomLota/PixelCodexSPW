@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Step1Form from './Step1Form';
 import Step2Form from './Step2Form';
 import ConfirmationMessage from './ConfirmationMessage';
-import { sendBookingNotification } from '../services/api';
+import { sendBookingNotification } from '../services/emailService';
 
 const BookingPopup = ({ isOpen, onClose }) => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -17,6 +17,14 @@ const BookingPopup = ({ isOpen, onClose }) => {
     date: '',
     time: '12:00 pm'
   });
+
+  // Handle closing the popup
+  const handleClose = () => {
+    // Only allow closing if not submitting
+    if (!isSubmitting) {
+      onClose();
+    }
+  };
 
   const handleStep1Submit = (data) => {
     setFormData({
@@ -36,7 +44,7 @@ const BookingPopup = ({ isOpen, onClose }) => {
     setError(null);
     
     try {
-      // Send notification with form details
+      // Send notification email with form details
       await sendBookingNotification(finalFormData);
       
       // Move to confirmation step
@@ -68,15 +76,15 @@ const BookingPopup = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50">
+    <div className="fixed inset-0 flex items-center justify-center z-50 animate-fadeIn">
       {/* Overlay */}
       <div 
-        className="absolute inset-0 bg-[#1e1e1e] bg-opacity-70 transition-opacity duration-300 ease-in-out"
-        onClick={onClose}
+        className="absolute inset-0 bg-[#1e1e1e] bg-opacity-70"
+        onClick={handleClose}
       ></div>
       
       {/* Modal Content */}
-      <div className="bg-[#1e1e1e] text-white rounded-lg p-8 max-w-lg w-full z-10 relative transition-all duration-300 ease-in-out transform">
+      <div className="bg-[#1e1e1e] text-white rounded-lg p-12 max-w-md w-full z-10 relative transform transition-all duration-300 ease-in-out animate-scaleIn">
         {error && (
           <div className="bg-red-500 text-white p-3 mb-4 rounded-md">
             {error}
