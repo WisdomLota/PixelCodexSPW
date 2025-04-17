@@ -2,8 +2,11 @@ import React from 'react';
 import GlowEffect from './GlowEffect';
 import joinWhatsapp from '../assets/joinWhatsapp.png';
 import joinTelegram from '../assets/joinTelegram.png';
+import { useNavigate } from 'react-router-dom';
 
 const JoinCommunity = () => {
+
+  const navigate = useNavigate();
   return (
     <div id='community' className="w-full bg-[#1e1e1e] text-[#fbfbfb] py-16 xl:px-32 md:px-16 px-8 mt-32 overflow-x-hidden min-h-screen">
 
@@ -45,7 +48,7 @@ const JoinCommunity = () => {
          <div className='flex border-t-2 border-l-2 border-b-2 rounded-tl-xl rounded-bl-xl p-4 justify-center items-center'>
            <div className='space-y-8'>
              <p className='text-2xl font-medium'>Whatsapp</p>
-             <button className='md:text-xl text-[#ffcc00] border rounded-md p-2 border-[#ffcc00] hover:text-[#ffff00] hover:border-[#ffff00] cursor-pointer text-nowrap'>Join Community</button>
+             <a href='https://chat.whatsapp.com/DG7610rrr5wEhPkdxKNV6H' className='md:text-xl text-[#ffcc00] border rounded-md p-2 border-[#ffcc00] hover:text-[#ffff00] hover:border-[#ffff00] cursor-pointer text-nowrap'>Join Community</a>
            </div>
            <div className=''>
              <img src={joinWhatsapp} alt="join-whatsapp" className='lg:w-72 lg:h-64 w-36 h-36'/>
@@ -54,7 +57,7 @@ const JoinCommunity = () => {
          <div className='flex border-t-2 border-l-2 border-b-2 rounded-tl-xl rounded-bl-xl p-4 justify-center items-center'>
            <div className='space-y-8'>
              <p className='text-2xl font-medium'>Telegram</p>
-             <button className='md:text-xl text-[#ffcc00] border rounded-md p-2 border-[#ffcc00] hover:text-[#ffff00] hover:border-[#ffff00] cursor-pointer text-nowrap'>Join Community</button>
+             <a href='#' className='md:text-xl text-[#ffcc00] border rounded-md p-2 border-[#ffcc00] hover:text-[#ffff00] hover:border-[#ffff00] cursor-pointer text-nowrap'>Join Community</a>
            </div>
            <div>
              <img src={joinTelegram} alt="join-telegram"className='lg:w-72 lg:h-64 w-36 h-36' />
