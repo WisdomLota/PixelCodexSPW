@@ -13,7 +13,7 @@ const LandingPage = () => {
     <div className='min-h-screen bg-[#1e1e1e] text-white'>
         <NavBar />
         <HeroSection />
-        <PixelCodexBootcamp />
+        <PixelCodexBootcamp nav='/bootcamp' inLink='/bootcamp'/>
         <PixelCodexAccordion />
         <JoinCommunity />
         <PixelAccordionTwo />
