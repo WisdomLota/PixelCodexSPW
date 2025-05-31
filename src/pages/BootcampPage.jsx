@@ -14,7 +14,7 @@ const BootcampPage = () => {
   return (
     <div className="min-h-screen bg-[#1e1e1e] text-[#fbfbfb]">
         <NavBar />
-        <PixelCodexBootcamp inLink="#bootcamp-cards" nav="#bootcamp-cards"/>
+        <PixelCodexBootcamp/>
 
         {/* Bootcamp Cards Section */}
         <div className="flex md:flex-row flex-col justify-center items-center space-x-8 md:space-x-48 xl:space-x-80 p-6 xl:px-24 mt-6 space-y-24 md:space-y-0" id="bootcamp-cards">
