@@ -7,7 +7,7 @@ import leftHash from "../assets/leftHash.png";
 import semicolon from "../assets/semiColon.png";
 import { useNavigate } from "react-router-dom";
 
-const PixelCodexBootcamp = () => {
+const PixelCodexBootcamp = ({inLink=""}) => {
 
     const navigate = useNavigate();
 
@@ -55,7 +55,7 @@ const PixelCodexBootcamp = () => {
         {/* Register Button */}
         <div className="flex justify-center mt-12" onClick={() => navigate("/bootcamp")}>
           <button className="bg-[#ffcc00] hover:bg-yellow-500 text-[#1e1e1e] font-normal text-xl py-3 px-8 rounded-md transition-colors cursor-pointer">
-            Register
+            <a href={`${inLink}`}>Register</a>
           </button>
         </div>
       </div>

@@ -6,16 +6,12 @@ const BootcampCard = ({
   programType = "Bootcamp",
   targetAudience = "For Absolute beginners",
   description = "Unleash your potential with our Python Programming Bootcamp. Start from the basics, master Python, and earn a certificate to showcase your new programming prowess!",
-  availableSeats = 50,
+  availableSeats = "Only 25 seats available",
   price = "₦45, 000",
   buttonText = "Register",
   image = pythonPerson,
-  onRegister = () => console.log("Register clicked")
+  linkToForm = "https://forms.gle/fCUdqJez2kRY2MCf7",
 }) => {
-
-  const priceColorClasses = {
-    yellow: "text-[#ffcc00]",
-  };
 
   return (
     <div className="min-h-screen bg-[#1e1e1e] text-[#fbfbfb] poppins-regular p-8">
@@ -53,7 +49,7 @@ const BootcampCard = ({
           {/* Available seats */}
           <div>
             <p className="text-lg text-[#ffcc00]">
-              Only {availableSeats} seats available
+              {availableSeats}
             </p>
           </div>
         </div>
@@ -67,10 +63,9 @@ const BootcampCard = ({
               </span>
             </div>
             <button 
-              onClick={onRegister}
               className="bg-[#ffcc00] hover:bg-yellow-500 transition-colors duration-200 text-[#1e1e1e] px-6 py-2 rounded-lg text-lg"
             >
-              {buttonText}
+              <a href={`${linkToForm}`}>{buttonText}</a>
             </button>
           </div>
         </div>

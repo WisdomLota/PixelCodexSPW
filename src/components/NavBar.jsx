@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import pixelMenu from '../assets/pixelMenu.svg';
 import pixelX from '../assets/pixelX.svg';
 import PClogo from '../assets/PClogo.svg';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,11 +11,13 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const navigate = useNavigate();
+
   return (
     <nav className="p-4 text-[#fbfbfb] poppins-regular w-full relative top-0 z-50">
       <div className="xl:px-32 md:px-16 px-8 flex justify-between space-x-4 items-center">
         {/* Logo */}
-        <div className="flex items-center -ml-6">
+        <div className="flex items-center -ml-6" onClick={() => navigate('/')}>
           <img src={PClogo} alt="PixelCodexLogo" className='w-16 h-16 md:w-28 md:h-28'/>
         </div>
 
