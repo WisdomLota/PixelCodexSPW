@@ -4,7 +4,7 @@ import anchoredBrackets from "../assets/anchorBrackets.png";
 import bars from "../assets/bars.png";
 import rightHash from "../assets/rightHash.png";
 import leftHash from "../assets/leftHash.png";
-import semicolon from "../assets/semicolon.png";
+import semicolon from "../assets/semiColon.png";
 
 const PixelCodexBootcamp = () => {
  return (
