@@ -62,13 +62,13 @@ const BootcampCard = ({
         <div className="bottom-0 left-0 right-0 bg-[#1e1e1e] mt-12">
           <div className="max-w-4xl mx-auto flex items-center justify-between">
             <div>
-              <span className="text-2xl text-[#ffcc00]">
+              <span className="text-lg text-[#ffcc00]">
                 Price: {price}
               </span>
             </div>
             <button 
               onClick={onRegister}
-              className="bg-[#ffcc00] hover:bg-yellow-500 transition-colors duration-200 text-[#1e1e1e] px-8 py-3 rounded-lg text-lg"
+              className="bg-[#ffcc00] hover:bg-yellow-500 transition-colors duration-200 text-[#1e1e1e] px-6 py-2 rounded-lg text-lg"
             >
               {buttonText}
             </button>
@@ -78,21 +78,5 @@ const BootcampCard = ({
     </div>
   );
 }
-
-// Example usage with different props:
-// 
-// <ProgrammingBootcamp 
-//   imageSize="w-80 h-80"
-//   programName="JavaScript"
-//   programType="Masterclass"
-//   targetAudience="For Intermediate Developers"
-//   description="Master modern JavaScript and build amazing web applications!"
-//   availableSeats={30}
-//   price="$299"
-//   accentColor="blue"
-//   priceColor="green"
-//   buttonText="Enroll Now"
-//   onRegister={() => alert('Enrollment started!')}
-// />
 
 export default BootcampCard

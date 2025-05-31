@@ -15,12 +15,12 @@ const PixelCodexBootcamp = () => {
     <div className="min-h-screen bg-[#1e1e1e] flex items-center justify-center p-8">
       <div className="relative w-full max-w-7xl ">
         {/* Main Card */}
-        <div className="bg-[#1e1e1e] border-2 border-[#fbfbfb] rounded-md w-full h-96 relative overflow-hidden">
+        <div className="bg-[#1e1e1e] border-2 border-[#fbfbfb] rounded-md w-full h-96 relative overflow-hidden flex items-center justify-center">
           {/* Background decorative elements */}
           <div className="absolute top-4 left-4 transform -rotate-6">
             {<img src={leftBrace} alt="leftBrace" className="w-4 md:w-8 h-12 md:h-28 "></img>}
           </div>
-          <div className="absolute right-0 transform">
+          <div className="absolute top-0 right-0 transform">
             {<img src={anchoredBrackets} alt="anchorBrackets" className="w-8 md:w-16 h-16 md:h-28 "></img>}
           </div>
           <div className="absolute bottom-4 right-4 transform rotate-6">
@@ -39,13 +39,13 @@ const PixelCodexBootcamp = () => {
           </div>
           
           {/* Double lines decoration */}
-          <div className="absolute bottom-8">
+          <div className="absolute bottom-0 left-0">
             {<img src={bars} alt="bars" className="w-12 md:w-20 h-16 md:h-32 "></img>}
           </div>
           
-          {/* Main Content */}
-          <div className="text-center relative z-10 md:mt-36 sm:mt-32 mt-24 karma-regular">
-            <h1 className="text-[#fbfbfb] md:text-6xl text-5xl mb-2 mt-16">
+          {/* Main Content - Now properly centered */}
+          <div className="text-center relative z-10 karma-regular p-4">
+            <h1 className="text-[#fbfbfb] md:text-5xl text-4xl">
               Pixel Codex Summer <br/>
               Programming Bootcamp
             </h1>
