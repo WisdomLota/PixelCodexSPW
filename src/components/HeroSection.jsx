@@ -28,7 +28,7 @@ const HeroSection = () => {
           we'll have a well structured roadmap for them to follow
         </p>
         <button 
-          className="bg-[#ffcc00] float-end hover:bg-yellow-500 text-[#1e1e1e] font-noraml text-xl py-3 px-8 rounded-md transition-colors cursor-pointer"
+          className="bg-[#ffcc00] float-end hover:bg-yellow-500 text-[#1e1e1e] font-normal text-xl py-3 px-8 rounded-md transition-colors cursor-pointer"
           onClick={openBookingPopup}
         >
           Book Consultation

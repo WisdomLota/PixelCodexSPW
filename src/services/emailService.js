@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 
 // Initialize with user ID
 const init = () => {
-  emailjs.init("aVOybK52Uhm1rSJbE"); // User ID
+  emailjs.init("6kXtQam40V_km60QZ"); // User ID
 };
 
 const sendBookingNotification = async (formData) => {
