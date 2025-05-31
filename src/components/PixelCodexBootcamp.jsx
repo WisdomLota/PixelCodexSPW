@@ -5,8 +5,12 @@ import bars from "../assets/bars.png";
 import rightHash from "../assets/rightHash.png";
 import leftHash from "../assets/leftHash.png";
 import semicolon from "../assets/semiColon.png";
+import { useNavigate } from "react-router-dom";
 
 const PixelCodexBootcamp = () => {
+
+    const navigate = useNavigate();
+
  return (
     <div className="min-h-screen bg-[#1e1e1e] flex items-center justify-center p-8">
       <div className="relative w-full max-w-7xl ">
@@ -49,7 +53,7 @@ const PixelCodexBootcamp = () => {
         </div>
         
         {/* Register Button */}
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-12" onClick={() => navigate("/bootcamp")}>
           <button className="bg-[#ffcc00] hover:bg-yellow-500 text-[#1e1e1e] font-normal text-xl py-3 px-8 rounded-md transition-colors cursor-pointer">
             Register
           </button>
