@@ -40,7 +40,7 @@ const PixelCodexBootcamp = () => {
           </div>
           
           {/* Main Content */}
-          <div className="text-center relative z-10 md:my-36 sm:my-32 my-24 karma-regular">
+          <div className="text-center relative z-10 md:my-36 sm:my-32 my-28 karma-regular">
             <h1 className="text-[#fbfbfb] md:text-6xl text-5xl mb-2">
               Pixel Codex Summer <br/>
               Programming Bootcamp
