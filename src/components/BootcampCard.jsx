@@ -25,7 +25,7 @@ const BootcampCard = ({
         </div>
         
         {/* Content Section */}
-        <div className="space-y-6">
+        <div className="space-y-4">
           {/* Title */}
           <div>
             <h1 className="text-3xl md:text-4xl font-semibold mb-2 karma-regular">
@@ -55,7 +55,7 @@ const BootcampCard = ({
         </div>
         
         {/* Bottom Section - Price and Register */}
-        <div className="bottom-0 left-0 right-0 bg-[#1e1e1e] mt-12">
+        <div className="bottom-0 left-0 right-0 bg-[#1e1e1e] mt-6">
           <div className="max-w-4xl mx-auto flex items-center justify-between">
             <div>
               <span className="text-lg text-[#ffcc00]">

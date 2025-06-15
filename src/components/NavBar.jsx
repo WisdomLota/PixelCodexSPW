@@ -26,6 +26,9 @@ const NavBar = () => {
           <a href="/#consultation" className="hover:text-[#66ffff] transition-colors">
             Consultation
           </a>
+          <a href="/bootcamp" className="hover:text-[#66ffff] transition-colors">
+            Bootcamp
+          </a>
           <a href="/#about" className="hover:text-[#66ffff] transition-colors">
             About
           </a>
@@ -56,6 +59,13 @@ const NavBar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Consultation
+            </a>
+            <a 
+              href="/bootcamp" 
+              className=" py-2 hover:text-[#66ffff] transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Bootcamp
             </a>
             <a 
               href="/#about" 

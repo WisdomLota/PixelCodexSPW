@@ -24,7 +24,7 @@ const BootcampPage = () => {
             availableSeats="Only 50 seats available"
             price="₦45, 000"
             image={pythonPerson}
-            linkToForm="https://forms.gle/vmR4qTU9pyZRK9w99"/>
+            linkToForm="https://forms.gle/uxfYmU3rynRKfFbi7"/>
 
             <BootcampCard 
             programName="Game Development"
@@ -34,7 +34,7 @@ const BootcampPage = () => {
             games from scratch and earn a certificate to kickstart your gaming career!"
             price="₦35, 000"
             image={gameDevPerson}
-            linkToForm="https://forms.gle/EWAJn5HaroseXeLR6"
+            linkToForm="https://forms.gle/sh7EX3m9huWP9R8C6"
             />
         </div>
 
@@ -47,6 +47,7 @@ const BootcampPage = () => {
             master cross-platform development, and earn a certificate to showcase your skills."
             price="₦47, 600"
             image={appDevPerson}
+            linkToForm="https://forms.gle/psZoZKE8BxXUJEYk8"
             />
             
             <BootcampCard 
@@ -57,13 +58,24 @@ const BootcampPage = () => {
             from scratch and earn a certificate to launch your design career!"
             image={UIUXperson}
             price="₦35, 000"
-            linkToForm="https://forms.gle/tV3FTkn63gP8xu9P9"
+            linkToForm="https://forms.gle/SZPvrWRj5fgSUx6e9"
             />
         </div>
 
         <div className="flex md:flex-row flex-col justify-center items-center space-x-8 md:space-x-48 xl:space-x-80 p-6 xl:px-24 mt-6 space-y-24 md:space-y-0">
             <BootcampCard 
-            programName="Web Development"
+            programName="Internet Programming"
+            programType="Bootcamp"
+            availableSeats="Only 25 seats available"
+            description="Take a perfect starting point here. You'll dive into the fundamentals of how websites are made, even if you've never coded before. Finish strong with a 
+            certificate and skill of dynamic nature that'll kickstart your journey into the digital world."
+            image={webDevPerson}
+            price="₦25, 600"
+            linkToForm="https://forms.gle/Ei9eeorke7dujaDD8"
+            />
+
+            <BootcampCard 
+            programName="Internet Programming II"
             programType="Bootcamp"
             targetAudience="For Junior Devs who know HTML, CSS and JS"
             availableSeats="Only 25 seats available"
@@ -71,18 +83,7 @@ const BootcampPage = () => {
             to build dynamic applications and earn a certificate to boost your career."
             image={webDevJnrPerson}
             price="₦35, 000"
-            linkToForm="https://forms.gle/9z7sEy7AaZdpJPKp7"
-            />
-            
-            <BootcampCard 
-            programName="Web Development"
-            programType="Bootcamp"
-            availableSeats="Only 25 seats available"
-            description="Take a perfect starting point here. You'll dive into the fundamentals of how websites are made, even if you've never coded before. Finish strong with a 
-            certificate and skill of dynamic nature that'll kickstart your journey into the digital world."
-            image={webDevPerson}
-            price="₦25, 600"
-            linkToForm="https://forms.gle/9z7sEy7AaZdpJPKp7"
+            linkToForm="https://forms.gle/itnW8Uw1FGGezF9c9"
             />
         </div>
 
@@ -115,6 +116,7 @@ const BootcampPage = () => {
             Solidity and Python, and earn a certificate to showcase your expertise in modern development."
             image={pythonPerson}
             price="Free"
+            linkToForm="https://forms.gle/Akg12JnTW6gE9KRCA"
             />
         </div>
 
